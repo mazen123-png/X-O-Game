@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x o game</title>
+    <link rel="stylesheet" href="xo.css">
+</head>
+<body>
+    <div class="game" id="game">
+        <div class="players">
+            <div class="player1">
+                <h4>Player1</h4>
+                <h5 id="count1">0</h5>
+            </div>
+            <div class="player2">
+                <h4>Player2</h4>
+                <h5 id="count2">0</h5>
+            </div>
+        </div>
+        <div class="contain">
+            <div class="title"> <span>X O</span> Game</div>
+            <button id="restart">Restart</button>
+        </div>
+        <div class="div1">
+            <div class="square" id="item0" onclick="game(this.id)"></div>
+            <div class="square" id="item1" onclick="game(this.id)"></div>
+            <div class="square" id="item2" onclick="game(this.id)"></div>
+        </div>
+        <div class="div2">
+            <div class="square" id="item3" onclick="game(this.id)"></div>
+            <div class="square" id="item4" onclick="game(this.id)"></div>
+            <div class="square" id="item5" onclick="game(this.id)"></div>
+        </div>
+        <div class="div3">
+            <div class="square" id="item6" onclick="game(this.id)"></div>
+            <div class="square" id="item7" onclick="game(this.id)"></div>
+            <div class="square" id="item8" onclick="game(this.id)"></div>
+        </div>
+    </div>
+    <div id="startGame">
+        <button id="start">Start Game</button>
+    </div>
+    <div class="turn" id="turn">
+        <h1>Who Start ?</h1>
+        <h3 class="player_1">Player1</h3>
+        <button id="X" class="turnX">X</button>
+        <h3 class="player_2">Player2</h3>
+        <button id="O" class="turnO">O</button>
+    </div>
+    <script src="xo.js"></script>
+</body>
+</html>

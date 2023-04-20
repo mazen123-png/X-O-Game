@@ -79,7 +79,7 @@ function end(num1,num2,num3){
     document.getElementById('item' + num2).style.background = '#222'
     document.getElementById('item' + num3).style.background = '#222'
     setInterval(function(){title.innerHTML += '.'},500)
-    setTimeout(function(){location.reload()},2000)
+    setTimeout(function(){location.reload()},500)
     
 }
 
@@ -129,7 +129,7 @@ countPlayer1.innerHTML = counter
 function endtoe(num1,num2,num3,num4,num5,num6,num7,num8,num9){
     title.innerHTML = 'No Winner'
     setInterval(function(){title.innerHTML += '.'},500)
-    setTimeout(function(){location.reload()},1000)
+    setTimeout(function(){location.reload()},500)
     startTurn.classList.add('hide')
     Maingame.classList.remove('hide')
     document.getElementById('item' + num1).style.background = '#222'

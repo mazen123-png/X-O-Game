@@ -10,15 +10,16 @@ let startTurn = document.getElementById('turn')
 let startGame = document.getElementById('startGame')
 let startTurnX = document.getElementById('X')
 let startTurnO = document.getElementById('O')
+// start game
+start.onclick = function(){
+    startTurn.classList.remove('hide')
+    startGame.classList.add('hide')
+}
 if(localStorage.product == null && localStorage.product2 == null){
     Maingame.classList.add('hide')
     startTurn.classList.add('hide')
 }else{
-    startGame.classList.add('hide')
-    startTurn.classList.add('hide')
-}
-// start game
-start.onclick = function(){
+    Maingame.classList.add('hide')
     startTurn.classList.remove('hide')
     startGame.classList.add('hide')
 }
@@ -59,8 +60,6 @@ restart.onclick = function(){
     countPlayer1.innerHTML = 0
     countPlayer2.innerHTML = 0
     window.location.reload()
-    startTurn.classList.add('hide')
-    Maingame.classList.remove('hide')
 }
 
 // end of game 
@@ -81,8 +80,7 @@ function end(num1,num2,num3){
     document.getElementById('item' + num3).style.background = '#222'
     setInterval(function(){title.innerHTML += '.'},500)
     setTimeout(function(){location.reload()},2000)
-    startTurn.classList.add('hide')
-    Maingame.classList.remove('hide')
+    
 }
 
 
@@ -120,8 +118,8 @@ function game(id){
         turn = 'x'
         title.innerHTML = 'Turn X'
     }
-    winner()
     nowinner()
+    winner()
 }
 // reading data on the players
 countPlayer2.innerHTML = counter2
@@ -131,7 +129,9 @@ countPlayer1.innerHTML = counter
 function endtoe(num1,num2,num3,num4,num5,num6,num7,num8,num9){
     title.innerHTML = 'No Winner'
     setInterval(function(){title.innerHTML += '.'},500)
-    setTimeout(function(){location.reload()},2000)
+    setTimeout(function(){location.reload()},1000)
+    startTurn.classList.add('hide')
+    Maingame.classList.remove('hide')
     document.getElementById('item' + num1).style.background = '#222'
     document.getElementById('item' + num2).style.background = '#222'
     document.getElementById('item' + num3).style.background = '#222'
